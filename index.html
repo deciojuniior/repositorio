@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Cadastrar</title>
+    <script>
+        function Enviar() {
+            var nome = document.getElementById("nome").value;
+            var nick = document.getElementById("sobrenome").value;
+            var senha = document.getElementById("senha").value;
+            var email = document.getElementById("email").value;
+            var data =document.getElementById("nascimento").value;
+
+            var senha1 = document.getElementById("senha").value;
+            var rep_senha = senhares.value;
+
+            if (senha1 != rep_senha) {
+                alert("Senhas diferentes!")
+                senha.focus();
+                return false;
+            }
+
+            alert("Nome: " +nome+"\nNick: " +nick+"\nSenha: " +senha+"\nEmail: " +email+"\nData: " +data);
+        }
+    </script>
+</head>
+<body>
+<form>
+    <h1>Cadastro</h1>
+    <p class="nome">
+        <input type="nome" id="nome" placeholder="Nome" minlength="3" required /><br>
+        <br>
+        <input type="nome" id="sobrenome" placeholder="Nick" minlength="3" maxlength="8" required /> <br>
+    </p>
+
+    <p class="senha">
+        <input type="password" id="senha" placeholder="Senha" minlength="4" maxlength="8" required> <br>
+        <br>
+        <input type="password" id="senhares" placeholder="Senha" minlength="4" maxlength="8" required/> <br>
+    </p>
+
+    <p class="email">
+        <input type="email" id="email" placeholder="Email" required /> <br>
+    </p>
+
+    <p class="data">
+        <input type="date" id="nascimento" required/> <br>
+    </p>
+
+    <label class="checkbox">
+        <label><input type="radio" value="masculino"> Masculino</label>
+        <label><input type="radio" value="feminino"> Feminino</label>
+    </label>
+    <br>
+    <br>
+
+    <button type="button" class="botao submit" onclick="Enviar()">Cadastrar</button>
+</form>
+
+</body>
+</html>
